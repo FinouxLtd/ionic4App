@@ -1,0 +1,22 @@
+<ion-content class="bgImg">
+  <div class="dummySpace"></div>
+    <ion-list *ngFor="let a of order">
+      <div padding class="marBottom">
+        <span class="orderNum">Order No {{a.orderNumber}}</span>
+          <span class="orderAmount"> &#x20B9; {{a.amount}}</span>
+          <h6 class="orderdate">{{a.orderDate}}</h6>
+        </div>
+        <ion-item>
+        
+          <ion-avatar slot="start">
+            <img src="{{a.img}}">
+          </ion-avatar>
+          <ion-label>
+            <span class="orderAmountSamll"> &#x20B9; {{a.amount}}</span>
+            <h2><b>{{a.status}}</b></h2>
+            <ion-icon class="forwordIcon" name="ios-arrow-forward"></ion-icon>
+            <h3 style="white-space: normal;">{{a.orderName}}</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+</ion-content>

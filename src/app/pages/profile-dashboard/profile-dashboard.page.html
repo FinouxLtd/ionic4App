@@ -1,0 +1,33 @@
+<!-- <ion-header> -->
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button>
+      <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <!-- <ion-title align="center">Chef's Dashboard</ion-title> -->
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+<!-- </ion-header> -->
+<ion-content style="background: #f8f8f8;">
+  <br>
+  <br>
+    <div align="center" class="mainDiv" padding>
+  <div align="center">
+    <img class="userImg" src="https://png.pngtree.com/svg/20170331/businessman_863430.png">
+  </div>
+      <h2>John Doe</h2>
+      <p class="emailMobile">johndoe123@gmail.com   |   +91 9876543210</p>
+
+      <ion-item *ngFor="let profile of profileList" class="listItem">
+        <ion-icon name='{{profile.iconStart}}' item-start></ion-icon>
+          <ion-label>{{profile.name}}</ion-label>
+        <ion-icon name='{{profile.iconEnd}}' item-end></ion-icon>
+      </ion-item>
+    <ion-button shape="block" color="danger">Log Out</ion-button>
+  </div>
+</ion-content>

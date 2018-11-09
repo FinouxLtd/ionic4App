@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+     <ion-grid>
+        <ion-row>
+          <ion-col>
+              <ion-button shape="round" color="primary" (click)="loginwithFacebook()">Facebook</ion-button>
+          </ion-col>
+          <ion-col>
+              <ion-button shape="round" color="danger" (click)="loginWithGmail()">Google</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button shape="round" color="primary" (click)="loginWithLinkedIn()">inkedIn</ion-button>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                    <ion-button shape="round" color="dark" (click)="inAppBrowserOpen()">In App Browser</ion-button>
+            </ion-col>
+            <ion-col>
+                    <ion-button shape="round" color="dark" (click)="go()">Next</ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      <ion-card *ngFor="let i of products">
+          <ion-img src="https://www.officefurnitureonline.co.nz/wp-content/uploads/2018/02/Oslo-executive-4-door-storage-unit-office-setting.jpg"></ion-img>
+          <ion-card-header>
+              <ion-card-title>{{i.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+              <p>{{i.description}}</p>
+          </ion-card-content>
+      </ion-card>
+</ion-content>

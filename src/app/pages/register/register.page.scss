@@ -1,0 +1,95 @@
+@import "../../../global.scss";
+
+.contentBg{
+    background-image: url('../../../assets/imgs/ChefCanSplash.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    .logoImg{
+        max-width : 40%;
+    }
+    .formMainDiv{
+        background: white;
+        margin-top:30px; 
+        background: white;
+        // height: 90%;
+        box-shadow: 7px 4px 58px -12px #86888f;
+
+        .formSubDiv{
+            margin: 10px;
+
+            .invalidPassword{
+                font-size: 10px;
+                text-align: left;
+                color: var(--ion-color-chefCanPrimary);
+            }
+            .forgotPassword{
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--ion-color-chefCanPrimary);
+                text-align: right;
+            }
+           .loginBtn{
+                text-transform: capitalize;
+                --ion-color-base : var(--ion-color-chefCanPrimary);
+                color:white !important;
+                font-size: 17px;
+                --box-shadow :none;
+              
+            }
+            .registerBtn{
+            margin-top: 30px;
+            text-transform: capitalize;
+            font-size: 17px;
+            --box-shadow :none;
+            }
+            .socialMainDiv{
+                margin: 30px 35px 10px 35px;
+              .loginWithCls{
+                color: #48484a;
+                font-size: 12px;
+                text-transform: uppercase;
+               
+              }
+
+              ion-icon{
+                font-size: 42px;
+              }
+              .fbCls{
+                color: #455892;
+              }
+              .inCls{
+                  color :#0078b7;
+              }
+              .googleCls{
+                background: #dd4a3a;
+                color: white;
+                /* padding: 10px; */
+                font-size: 23px;
+                padding: 5px;
+                border-radius: 3px;
+                margin-top: 5px;
+              }
+            }
+        }
+
+      .genderMainDiv{
+        //   margin-top: 30px;
+        margin-top: 32px;
+      }
+    }
+} 
+ .footerDiv{
+    ion-col{
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--ion-color-chefCanPrimary);
+        border-right: 1px solid #ddd;
+    }
+    ion-col:last-child{
+        border-right: none !important;
+    }
+}

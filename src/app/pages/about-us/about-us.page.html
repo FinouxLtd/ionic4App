@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start" color="danger">
+          <ion-back-button color="danger"  defaultHref="login"></ion-back-button>
+        </ion-buttons>
+    <ion-title>About Us</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="contentBg">
+    <div class="imgCls">
+        <img src="https://ak4.picdn.net/shutterstock/videos/1811054/thumb/2.jpg"/>
+        <div class="imgText">
+            <h1>Who are we?</h1>
+        <h5>
+            Keep close to Nature's heart. and break clear away, once in awhile,
+            and climb a mountain or spend a week in the woods.
+        </h5>
+        </div>
+      
+      </div>
+    <div class="formMainDiv" padding>
+      <div *ngFor="let a of aboutList">
+        <h5>{{a.title}}</h5>
+        <p>{{a.subtitle}}</p>
+      </div>
+   </div>
+</ion-content>

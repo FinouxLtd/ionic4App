@@ -1,0 +1,49 @@
+@import "../../../global.scss";
+
+.contentBg{
+    // background-image: url('../../../assets/imgs/ChefCanSplash.jpg');
+    // height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    .logoImg{
+        max-width : 40%;
+    }
+    .formMainDiv{
+      margin: 18px;
+      margin-top: -38px;
+      z-index: 10000;
+      background: white;
+      position: absolute;
+      box-shadow: 7px 4px 58px -12px #86888f;
+      border-radius: 6px;
+        .formSubDiv{
+            margin: 10px;
+        }
+        p{
+          font-size: 13px;
+           color: #505050;
+        }
+        h5{
+          font-size: 16px;
+        }
+    }
+
+
+    .imgCls{
+      position: relative;
+      .imgText{
+        position: absolute;
+        top:0px;
+        padding: 15px;
+        background-color: rgba(0,0,0,0.3);
+        h1{
+          color: white;
+        }
+        h5{
+          color: #ddd;
+        }
+      }
+    }
+} 
+ 

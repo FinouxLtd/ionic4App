@@ -1,0 +1,66 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding class="contentBg">
+  <div align="center"><img class="logoImg" src="assets/imgs/chefCanLogo.png"></div>
+  <div padding class="formMainDiv">
+   <div class="formSubDiv">
+      <form (ngSubmit)="login()">
+         <ion-item>
+           <ion-label position="floating">EMAIL ID</ion-label>
+          <ion-input required type="text" [(ngModel)]="loginForm.username" name="email"></ion-input>
+        </ion-item>
+        <br>
+         <ion-item>
+          <ion-label position="floating">PASSWORD</ion-label>
+          <ion-input required type="password" [(ngModel)]="loginForm.password" name="password"></ion-input>
+        </ion-item>
+        <ion-grid>
+            <ion-row>
+              <ion-col class="invalidPassword">
+                <span *ngIf="invalidPassShow">*Invalid Password</span>
+              </ion-col>
+              <ion-col class="forgotPassword" href="/forgotPassword" (click)="forgotPassword()">
+               Forgot Password?
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <br><br>
+          <ion-button expand="block" class="loginBtn" type="submit">Login</ion-button>
+        </form>
+          <ion-button expand="block" class="registerBtn" color="light" (click)="register()">Register</ion-button>
+          <div align="center" class="socialMainDiv">
+             <p class="loginWithCls">Login With</p>
+              <ion-grid>
+                <ion-row>
+                  <ion-col (click)="loginwithFacebook()">
+                      <ion-icon name="logo-facebook" class="fbCls"></ion-icon>
+                  </ion-col>
+                  <ion-col (click)="loginWithGmail()">
+                      <ion-icon name="logo-googleplus" class="googleCls"></ion-icon>
+                  </ion-col>
+                  <ion-col  (click)="loginWithLinkedIn()">
+                      <ion-icon name="logo-linkedin" class="inCls"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+          </div>
+   </div>
+   <ion-grid class="footerDiv">
+      <ion-row>
+        <ion-col (click)="aboutUs()">
+            About Us
+        </ion-col>
+        <ion-col (click)="inAppBrowserOpen()">
+            Terms & Conditions
+        </ion-col>
+        <ion-col (click)="inAppBrowserOpen()">
+           Why to Join Us
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

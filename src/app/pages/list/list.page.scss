@@ -1,0 +1,35 @@
+.bgImg{
+    background-image: url('../../../assets/imgs/orderDetails.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.dummySpace{
+    margin-top: 120px; 
+}
+.orderNum{
+    font-weight: 700;
+    font-size: 14px;
+}
+.orderAmount{
+    font-weight: 300;
+    float: right;
+}
+.orderdate{
+    margin-top: 2px;
+    font-size: 13px;
+    color: #605a5a;
+}
+.marBottom{
+    margin-bottom: -20px;}
+    .orderAmountSamll{
+        font-weight: 300;
+        float: right;
+        font-size: 12px;
+    }
+
+    .forwordIcon{
+        float: right;
+        font-size: 12px;
+        color: #1eb8e5;
+    }

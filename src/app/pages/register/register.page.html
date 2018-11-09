@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start" color="danger">
+          <ion-back-button color="danger"  defaultHref="login"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="contentBg">
+  <div align="center"><img class="logoImg" src="assets/imgs/chefCanLogo.png"></div>
+  <div padding class="formMainDiv">
+   <div class="formSubDiv">
+      <form (ngSubmit)="login()">
+         <ion-item>
+           <ion-label position="floating">Name</ion-label>
+          <ion-input required type="text" [(ngModel)]="registerForm.name" name="name"></ion-input>
+        </ion-item>
+        <br>
+         <ion-item>
+          <ion-label position="floating">Mobile Number</ion-label>
+          <ion-input required type="number" [(ngModel)]="registerForm.mobile" name="mobile"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Date Of Birth</ion-label>
+          <ion-datetime display-format="MM/DD/YYYY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Select Gender</ion-label>
+          <ion-segment color="danger" mode="ios" class="genderMainDiv">
+            <ion-segment-button checked>
+              Male
+            </ion-segment-button>
+            <ion-segment-button color="danger">
+              Female
+            </ion-segment-button>
+          </ion-segment>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email Id</ion-label>
+          <ion-input required type="email" [(ngModel)]="registerForm.email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input required type="password" [(ngModel)]="registerForm.password" name="password"></ion-input>
+        </ion-item>
+        <br>
+        <br>
+        <ion-item>
+          <ion-checkbox slot="start" color="danger"></ion-checkbox>
+          <ion-label>Agreed to all <i>Terms & Conditions</i></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"  color="danger"></ion-checkbox>
+          <ion-label>Subscribe to our Newsletter</ion-label>
+        </ion-item>
+        <ion-grid>
+            <ion-row>
+              <ion-col class="invalidPassword">
+                <span *ngIf="invalidPassShow">*Invalid Password</span>
+              </ion-col>
+              <ion-col class="forgotPassword" href="/forgotPassword" (click)="forgotPassword()">
+               Forgot Password?
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <br><br>
+          <ion-button expand="block" class="loginBtn" type="submit">Become a member</ion-button>
+        </form>
+   </div>
+  </div>
+</ion-content>
+
